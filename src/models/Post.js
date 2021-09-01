@@ -1,4 +1,4 @@
-const { Model, STRING } = require("sequelize");
+const { Model, DataTypes } = require("sequelize");
 
 
 class Post extends Model {
@@ -6,15 +6,15 @@ class Post extends Model {
     static init(connection){
         super.init(
             {
-                title: STRING,
-                description: STRING,
-                image: STRING,
-                gist: STRING
+                title: DataTypes.STRING,
+                description: DataTypes.STRING,
+                image: DataTypes.STRING,
+                gist: DataTypes.STRING,
             },
             {
                 sequelize: connection,
             }
-        )
+        );
     }
 
     static associate(models){
@@ -22,5 +22,4 @@ class Post extends Model {
     }
 
 }
-
 module.exports = Post;

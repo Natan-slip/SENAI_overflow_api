@@ -1,3 +1,5 @@
+
+
 module.exports = {
     index(req, res) {
         const posts = [{
@@ -23,18 +25,22 @@ module.exports = {
             ]
         }];
 
-    res.send(posts);
-},
+        res.send(posts);
+    },
+
     find(req, res) {
 
-},
-store(req, res) {
+    },
 
-},
-update(req, res) {
+    store(req, res) {
 
-},
-delete (req, res) {
+    },
 
-},
+    update(req, res) {
+
+    },
+
+    delete(req, res) {
+
+    }
 }
