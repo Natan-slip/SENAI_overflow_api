@@ -5,13 +5,13 @@ const sessionController = require("./controllers/sessions");
 const userController = require("./controllers/users");
 const authMiddleware = require("./middlewares/auth");
 
-// Rotas públicas
+//rotas públicas
 routes.post('/sessions', sessionController.store);
 routes.post('/users', userController.store);
 
 routes.use(authMiddleware);
 
-// Rotas privadas
+//rotas privadas
 routes.get('/posts', postController.index);
 
 module.exports = routes;
